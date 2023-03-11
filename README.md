@@ -1,7 +1,7 @@
 # JS_lesson_5
 
 1) let date = new Date("2021-01-24 22:51:00"); <br>
-2) getDay() - для получения дня недели <br>
+2) getDay() - для получения дня недели в текущем часовом поясе<br>
 3)  let now = new Date(); 
     let tomorrow = new Date();
   
