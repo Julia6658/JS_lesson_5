@@ -80,3 +80,29 @@ form.addEventListener('submit', function(e) {
     updateChat();
     clearInputs();
 });
+
+// 2 задание
+let currentTime = new Date();
+let datePassed = new Date();
+datePassed.setHours(15, 26);
+
+
+let secondsPassed = (currentTime - datePassed) / 1000;
+let minutesPassed = (currentTime - datePassed) / 1000 / 60;
+let hoursPassed = (currentTime - datePassed) / 1000 / 60 / 60;
+
+console.log(secondsPassed, minutesPassed);
+
+function formatDate() {
+    if(secondsPassed < 1) {
+        console.log("Прямо сейчас");
+    } else if (minutesPassed < 1) {
+        console.log(`${secondsPassed} сек. назад`);
+    } else if (hoursPassed < 1) {
+        console.log(`${minutesPassed} минут назад`);
+    } else {
+        console.log(datePassed.toLocaleString().slice(0,-3));
+    }
+}
+
+formatDate();
