@@ -86,7 +86,6 @@ let currentTime = new Date();
 let datePassed = new Date();
 datePassed.setHours(15, 26);
 
-
 let secondsPassed = (currentTime - datePassed) / 1000;
 let minutesPassed = (currentTime - datePassed) / 1000 / 60;
 let hoursPassed = (currentTime - datePassed) / 1000 / 60 / 60;
