@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сервис Комментариев</title>
+    
+</head>
+
+<body>
+    <style>
+        body {background-color: #151529; color: #fff; font-family: Arial, sans-serif}
+        body * {box-sizing: border-box;}
+        input[type="text"], button {height: 30px;}
+        #form {display: flex; flex-direction:column;  width: 40%;}
+        input[type='radio'] {margin: 0 5px 0 8px;}
+        input[type='radio'] + label {margin-bottom: 0;}
+        .messages-wrapper img {max-width: 120px; margin-right: 20px;}
+        body input[type="text"], body textarea {border: 1px solid #148bec; margin-bottom: 20px; color: #fff; background: transparent;}
+        .formApp {column-gap: 80px;}
+        button[type=submit] {margin: 20px 0; cursotr:pointer}
+        .formApp {max-width: 80%; margin:0 auto; padding: 40px 0;}
+        label {margin-bottom:5px;}
+        h3 {margin:0;}
+        h4 {color: #148bec}
+        .showname {display: flex;}
+        .showname span{margin:0 20px 0 0;display: flex;}
+        .showname {margin: 0 0 20px 0;}
+        #chat {width: 50%;}
+        .post-item {
+            display: flex;
+            flex-wrap: wrap; 
+            padding: 0 0 30px 0; 
+            border-bottom: 1px dashed #148bec; 
+            margin: 0 0 20px 0;}
+        .post-item  p {margin: 0;]}
+        .post-item--date {margin-left: auto;color: #148bec;}
+        .post-item div:last-child {width: 100%; padding: 20px 0 0; }
+    </style>
+
+<div class="formApp" style="display:flex;">  
+    
+    <form id="form">
+        <h4>Оставьте ваш комментарий</h4>
+        <div class="showname">
+            <span>Показывать ваше имя ? </span>
+            <input type="radio" id="yes" name="colors" checked> <label for="yes">Да</label>
+            <input type="radio" id="no" name="colors"> <label for="no">Нет</label>
+        </div>
+        <label>ФИО</label>
+        <input type="text" id="userName" value>
+        
+        <label>Ссылка на аватар</label>
+        <input type="text" id="fileInput">
+        <label>Оставьте комментарий</label>
+        <textarea id="commentInput"></textarea>
+        <button type=submit>Отправить</button>
+    </form>
+
+    <div id='chat'>
+        <h4>Чат</h4>
+        <div class="messages-wrapper"></div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
